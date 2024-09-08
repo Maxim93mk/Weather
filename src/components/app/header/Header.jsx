@@ -7,7 +7,7 @@ function Header() {
       <header>
         <div className="wrapper">
           <section className={styles.header}>
-            <h1 className={styles.title}>Погода</h1>
+            <h1 className={styles.title}>Погода в городе</h1>
             <div className={styles.searchBlock}>
               <input type="text"
                 className={styles.searchInput}

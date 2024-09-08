@@ -9,7 +9,7 @@
     color: #1b4965;
     font-size: 35px;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .searchBlock {
