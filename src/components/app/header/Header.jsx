@@ -1,7 +1,17 @@
 import styles from './Header.module.css'
+import useGetWeatherData from '../../../utils/getDataAPI';
+import { useEffect, useState } from 'react';
+
 
 
 function Header() {
+
+  const { isLoading, getWeatherData, error, axiosData } = useGetWeatherData();
+
+  useEffect(() => {
+    axiosData();
+  }, []);
+  console.log(getWeatherData, error);
   return (
     <>
       <header>
@@ -12,7 +22,8 @@ function Header() {
               <input type="text"
                 className={styles.searchInput}
                 placeholder='Введите название города...' />
-              <button className={styles.searchBtn}></button>
+              <button className={styles.searchBtn}
+              onClick={()=>axiosData()}></button>
             </div>
           </section>
         </div>
