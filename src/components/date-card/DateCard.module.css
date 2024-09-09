@@ -1,0 +1,32 @@
+.date {
+    padding: 53px 107px;
+    background-color: #5fa8d3;
+    max-width: 510px;
+    width: 100%;
+    border-radius: 30px;
+    color: #ffffff;
+    box-shadow: 0px 4px 40px 0px rgba(27, 73, 101, 0.25);
+
+}
+
+.city {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+}
+
+.currentTime {
+    padding-top: 30px;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 144px;
+    text-align: left;
+}
+
+.currentDay {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}

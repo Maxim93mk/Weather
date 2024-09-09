@@ -1,5 +1,5 @@
 import styles from './Header.module.css'
-import useGetWeatherData from '../../../utils/getDataAPI';
+import useGetWeatherData from '../../utils/getDataAPI';
 import { useEffect, useState } from 'react';
 
 
@@ -8,14 +8,14 @@ function Header() {
 
   const { isLoading, getWeatherData, error, axiosData } = useGetWeatherData();
 
-  useEffect(() => {
-    axiosData();
-  }, []);
+  // useEffect(() => {
+  //   axiosData();
+  // }, []);
   console.log(getWeatherData, error);
   return (
     <>
       <header>
-        <div className="wrapper">
+        {/* <div className="wrapper"> */}
           <section className={styles.header}>
             <h1 className={styles.title}>Погода в городе</h1>
             <div className={styles.searchBlock}>
@@ -26,7 +26,7 @@ function Header() {
               onClick={()=>axiosData()}></button>
             </div>
           </section>
-        </div>
+        {/* </div> */}
       </header>
     </>
   );

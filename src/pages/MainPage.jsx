@@ -1,10 +1,14 @@
 import styles from './MainPage.module.css'
-import Header from '../components/app/header/Header';
+import Header from '../components/header/Header';
+import Main from '../components/main/Main';
 
 function MainPage() {
   return (
     <>
-      <Header />
+      <div className="wrapper">
+        <Header />
+        <Main />
+      </div>
     </>
   );
 }
