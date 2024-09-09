@@ -1,31 +1,45 @@
 import styles from './Header.module.css'
-import useGetWeatherData from '../../utils/getDataAPI';
 import { useEffect, useState } from 'react';
 
 
 
-function Header() {
+function Header(props) {
+  const [stringSearch, setStringSearch] = useState('');
 
-  const { isLoading, getWeatherData, error, axiosData } = useGetWeatherData();
+  // Формирование строки для запроса
+  const setSearchQuery = (str) => {
+    if (str !== '') {
+      setStringSearch(str);
+    }
+    else {
+      setStringSearch("Зеленодольск");
+    }
+  }
+  // Отправка на запрос фильма из поисковой строки
+  const sendSearchQuery = () => {
+    props.axiosData(stringSearch);
+  }
 
-  // useEffect(() => {
-  //   axiosData();
-  // }, []);
-  console.log(getWeatherData, error);
+  useEffect(() => {
+    props.axiosData();
+  }, []);
+
   return (
     <>
       <header>
         {/* <div className="wrapper"> */}
-          <section className={styles.header}>
-            <h1 className={styles.title}>Погода в городе</h1>
-            <div className={styles.searchBlock}>
-              <input type="text"
-                className={styles.searchInput}
-                placeholder='Введите название города...' />
-              <button className={styles.searchBtn}
-              onClick={()=>axiosData()}></button>
-            </div>
-          </section>
+        <section className={styles.header}>
+          <h1 className={styles.title}>Погода в городе</h1>
+          <div className={styles.searchBlock}>
+            <input type="text"
+              className={styles.searchInput}
+              placeholder='Введите название города...'
+              onChange={(evt) => setSearchQuery(evt.target.value)}
+              onKeyUp={(evt) => evt.key === 'Enter' ? sendSearchQuery() : ''} />
+            <button className={styles.searchBtn}
+              onClick={() => sendSearchQuery()}></button>
+          </div>
+        </section>
         {/* </div> */}
       </header>
     </>
