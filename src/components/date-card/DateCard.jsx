@@ -1,18 +1,17 @@
 import styles from './DateCard.module.css'
 
 function DateCard(props) {
-  console.log(props.weather)
   return (
     <>
       <div className={styles.date}>
         <div className={styles.up}>
           <div className={styles.cityBlock}>
-            <p className={styles.city}>Санкт-Петербург</p>
-            <img src={props.icon} alt="icon flag" className={styles.icon} />
+            <p className={styles.city}>{props.name}</p>
+            {/* <img src={props.icon} alt="icon flag" className={styles.icon} /> */}
           </div>
           <div className={styles.coordBlock}>
-            <p className={styles.lon}>{props.lon}</p>
-            <p className={styles.lat}>{props.lat}</p>
+            <p className={styles.lon}>Долгота: {props.lon}°</p>
+            <p className={styles.lat}>Широта: {props.lat}°</p>
           </div>
         </div>
         <div className={styles.down}>

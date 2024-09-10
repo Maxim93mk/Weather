@@ -7,14 +7,15 @@ function Main(props) {
   //     console.log(elem);
   // });
 
-
+console.log(props)
   return (
     <>
       <main>
         <section className={styles.main}>
           <DateCard lon={props.coord.lon}
                     lat={props.coord.lat}
-                    icon = {props.weather[0].icon}/>
+                    icon = {props.weather[0].icon}
+                    name = {props.name}/>
           {/* <div className={styles.titleBlock}>
             <h2 className={styles.title}>Город: {props.name}222222</h2>
             <img src={props.icon} alt={props.country} className={styles.iconCountry} />
