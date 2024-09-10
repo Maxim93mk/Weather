@@ -8,17 +8,13 @@ function Header(props) {
 
   // Формирование строки для запроса
   const setSearchQuery = (str) => {
-    if (str !== '') {
-      setStringSearch(str);
-    }
-    else {
-      setStringSearch("Зеленодольск");
-    }
+    setStringSearch(str);
   }
   // Отправка на запрос фильма из поисковой строки
   const sendSearchQuery = () => {
     props.axiosData(stringSearch);
   }
+
 
   useEffect(() => {
     props.axiosData();
@@ -27,7 +23,6 @@ function Header(props) {
   return (
     <>
       <header>
-        {/* <div className="wrapper"> */}
         <section className={styles.header}>
           <h1 className={styles.title}>Погода в городе</h1>
           <div className={styles.searchBlock}>
@@ -40,7 +35,6 @@ function Header(props) {
               onClick={() => sendSearchQuery()}></button>
           </div>
         </section>
-        {/* </div> */}
       </header>
     </>
   );

@@ -12,10 +12,14 @@ const useGetWeatherData = () => {
 
     //Вынести в запросе город и единицы измерения
     const axiosData = (query = 'Зеленодольск') => {
+        console.log(query);
+        if(!query){
+            query = 'Казань';
+        }
         setIsLoading(true);
         axios.get(apiURL + query + apiKey + lang)
             .then(response => {
-                // console.log(response);
+                 console.log(response.data);
                 setError(false);
                 setWeatherData(response.data || []);
             })
