@@ -2,12 +2,19 @@ import styles from './Main.module.css';
 import DateCard from '../date-card/DateCard';
 
 function Main(props) {
+  // console.log(props.weather[0].icon)
+  // let coord = props.coord.map((elem)=>{
+  //     console.log(elem);
+  // });
+
+
   return (
     <>
       <main>
-
         <section className={styles.main}>
-          <DateCard/>
+          <DateCard lon={props.coord.lon}
+                    lat={props.coord.lat}
+                    icon = {props.weather[0].icon}/>
           {/* <div className={styles.titleBlock}>
             <h2 className={styles.title}>Город: {props.name}222222</h2>
             <img src={props.icon} alt={props.country} className={styles.iconCountry} />

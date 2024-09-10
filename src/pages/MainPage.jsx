@@ -5,13 +5,21 @@ import useGetWeatherData from '../utils/getDataAPI';
 
 function MainPage() {
   const { isLoading, getWeatherData, error, axiosData } = useGetWeatherData();
+
   console.log(getWeatherData);
+
+  // let coords = getWeatherData.coords.map((elem) => {
+  //   console.log(elem);
+  // });
+
+  // console.log(coords);
 
   return (
     <>
       <div className="wrapper">
-        <Header axiosData={axiosData}/>
-        <Main />
+        <Header axiosData={axiosData} />
+        <Main coord={getWeatherData.coord}
+          weather={getWeatherData.weather} />
       </div>
     </>
   );
