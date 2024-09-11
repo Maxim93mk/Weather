@@ -18,6 +18,7 @@ const useGetWeatherData = () => {
         setIsLoading(true);
         axios.get(apiURL + query + apiKey + lang)
             .then(response => {
+                console.log(response.data)
                 setError(false);
                 setWeatherData(response.data || []);
             })

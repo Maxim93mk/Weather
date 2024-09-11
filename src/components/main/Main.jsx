@@ -2,12 +2,14 @@ import styles from './Main.module.css';
 import DateCard from '../date-card/DateCard';
 
 function Main(props) {
-  // console.log(props.weather[0].icon)
-  // let coord = props.coord.map((elem)=>{
-  //     console.log(elem);
-  // });
+const currentDate = new Date();
 
-console.log(props)
+var d = new Date(new Date().getTime() + (props.timezone * 1000));
+            var hrs = d.getUTCHours();
+            var mins = d.getUTCMinutes();
+            var secs = d.getUTCSeconds();
+            console.log(hrs + ":" + mins + ":" + secs)
+
   return (
     <>
       <main>
