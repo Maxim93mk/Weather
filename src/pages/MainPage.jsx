@@ -6,16 +6,20 @@ import { useEffect, useState } from 'react';
 
 function MainPage() {
   const { isLoading, getWeatherData, error, axiosData } = useGetWeatherData();
-  const [coord, setCoord] = useState([]);
-  const [weather, setWeather] = useState([]);
-
+  console.log(isLoading )
   const getWeatherDataProcessing = () => {
     if (getWeatherData !== '') {
-      console.log(getWeatherData)
+      console.log(getWeatherData )
       return (
         <>
-          <Main coord={getWeatherData.coord}
-            weather={getWeatherData.weather} />
+          <Main id={getWeatherData.id}
+                coord={getWeatherData.coord}
+                weather={getWeatherData.weather}
+                name = {getWeatherData.name} 
+                wind = {getWeatherData.wind}
+                main = {getWeatherData.main}
+                sys = {getWeatherData.sys}
+                timezone = {getWeatherData.timezone} />
         </>
       )
     }

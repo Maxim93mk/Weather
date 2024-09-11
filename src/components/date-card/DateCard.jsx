@@ -6,12 +6,12 @@ function DateCard(props) {
       <div className={styles.date}>
         <div className={styles.up}>
           <div className={styles.cityBlock}>
+            <img src='assets/img/navigation.svg' alt="iconNavigation" className={styles.icon} />
             <p className={styles.city}>{props.name}</p>
-            {/* <img src={props.icon} alt="icon flag" className={styles.icon} /> */}
           </div>
           <div className={styles.coordBlock}>
-            <p className={styles.lon}>Долгота: {props.lon}°</p>
-            <p className={styles.lat}>Широта: {props.lat}°</p>
+            <p className={styles.coord}>Долгота: {props.lon}°</p>
+            <p className={styles.coord}>Широта: {props.lat}°</p>
           </div>
         </div>
         <div className={styles.down}>
