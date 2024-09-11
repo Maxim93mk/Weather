@@ -6,7 +6,7 @@ const useGetWeatherData = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [getWeatherData, setWeatherData] = useState('');
     const [error, setError] = useState(false);
-    const apiURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
+    const apiURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
     const apiKey = '&appid=35c6ba00b7d1a23174ed6f5acca058c6';
     const lang = '&lang=ru';
 

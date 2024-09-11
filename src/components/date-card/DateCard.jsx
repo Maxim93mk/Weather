@@ -15,8 +15,8 @@ function DateCard(props) {
           </div>
         </div>
         <div className={styles.down}>
-          <p className={styles.currentTime}>22:22</p>
-          <p className={styles.currentDay}>22:22</p>
+          <p className={styles.currentTime}>{props.timeZoneHours}:{props.timeZoneMinutes}</p>
+          <p className={styles.currentDate}>{props.timeZoneDate}</p>
         </div>
       </div>
     </>
