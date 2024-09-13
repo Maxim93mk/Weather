@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    font-family: "Poppins";
+    gap: 20px;
+    padding-top: 20px;
+
+}
+
+.wind{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

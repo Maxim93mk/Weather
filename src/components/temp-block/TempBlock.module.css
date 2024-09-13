@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: "Poppins";
+    padding-top: 20px;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.currentTempValue {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120px;
+}
+
+.minmaxTempBlock,
+.minmaxTemp {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.minmaxTemp {
+    gap: 0;
+    flex-wrap: nowrap;
+}
+
+.textDescr {
+    max-width: 150px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+}

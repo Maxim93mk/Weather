@@ -42,7 +42,7 @@
 
 .searchBtn {
     background: #bee9e8;
-    background-image: url('../../../../public/assets/img/search.svg');
+    background-image: url('../../../public/assets/img/search.svg');
     background-position: center;
     background-repeat: no-repeat;
     max-width: 100px;
