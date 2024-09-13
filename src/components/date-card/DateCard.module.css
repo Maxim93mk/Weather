@@ -1,7 +1,7 @@
 .date {
      display: flex;
     flex-wrap: wrap; 
-     justify-content: center; 
+     justify-content: space-around; 
      flex-direction: column;
     padding: 25px;
     background-color: #5fa8d3;
@@ -43,11 +43,11 @@
     font-weight: 700;
 }
 .time{
-    font-size: 45px;
+    font-size: 80px;
     font-weight: 700;
 }
 .descr{
-   
+    font-size: 20px;
     color: #1b4965;
 }
 .down {
@@ -55,7 +55,7 @@
     gap: 5px;
 }
 .currentDate{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #1b4965;
     line-height: 20px;
