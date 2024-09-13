@@ -1,19 +1,13 @@
 import styles from './WeatherCard.module.css';
 import TempBlock from '../temp-block/TempBlock';
-
+import WeatherConditionsBlock from '../weather-conditions-block/WeatherConditionsBlock';
 function WeatherCard(props) {
 
   return (
     <>
       <div className={styles.main}>
         <TempBlock/>
-       
-        <div className={styles.weatherConditions}>
-          <div className={styles.x}>
-            <img src="assets/img/compass.svg" alt="" className={styles.x}/>
-            <p>vf</p>
-          </div>
-        </div>
+       <WeatherConditionsBlock/>
         <div className={styles.sun}>
           <div className={styles.sunrise}>
             <p>Восход</p>

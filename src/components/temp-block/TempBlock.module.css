@@ -1,15 +1,14 @@
 .main {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* background-color: brown; */
     flex-wrap: wrap;
+    font-family: "Poppins";
 }
 
 .temperature {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 10px;
 }
 
@@ -23,14 +22,16 @@
 .minmaxTemp {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .minmaxTemp {
     gap: 0;
+    flex-wrap: nowrap;
 }
 
-.textDescr{
+.textDescr {
     max-width: 150px;
     width: 100%;
     font-size: 18px;
