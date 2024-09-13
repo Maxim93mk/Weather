@@ -1,11 +1,12 @@
 .date {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 84px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+    padding: 25px;
     background-color: #5fa8d3;
-    min-width: 600px;
-    max-width: 900px;
+    /* min-width: 600px; */
+    max-width: 510px;
     width: 100%;
     border-radius: 30px;
     color: #ffffff;
@@ -14,11 +15,10 @@
 }
 
 .up,
-.coordBlock {
+.down {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
 }
 
 .cityBlock {
@@ -26,8 +26,56 @@
     align-items: center;
     gap: 10px;
 }
+.city{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    text-transform: uppercase; 
+    color: #1b4965;
+}
+.coordBlock {
+    display: flex;
+    align-items: center;
+}
+.textValue{
+    font-size: 18px;
+    font-weight: 700;
+}
+.time{
+    font-size: 45px;
+    font-weight: 700;
+}
+.descr{
+   
+    color: #1b4965;
+}
+.down {
+    padding-top: 20px;
+    gap: 5px;
+}
+.currentDate{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b4965;
+    line-height: 20px;
+}
+/* .up,
+.coordBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; */
+/* gap: 30px; */
+/* } */
 
-.city,
+/* .cityBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; */
+/* gap: 10px; */
+/* } */
+
+/* .city,
 .coord {
     font-size: 36px;
     font-weight: 700;
@@ -54,4 +102,4 @@
     font-weight: 400;
     line-height: 30px;
     text-align: left;
-}
+} */

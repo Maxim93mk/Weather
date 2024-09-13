@@ -11,24 +11,41 @@ const useGetWeatherData = () => {
     const lang = '&lang=ru';
 
     //Вынести в запросе город и единицы измерения
-    const axiosData = (query = 'Зеленодольск') => {
-        if(!query){
-            query = 'Казань';
+    const axiosData = async (query = 'Зеленодольск') => {
+        try {
+            if (!query) {
+                query = 'Казань';
+            }
+            setIsLoading(true);
+            const URL = apiURL + query + apiKey + lang;
+            const response = await axios.get(URL);
+            console.log(response.data);
+            setError(false);
+            setWeatherData(response.data || []);
+        } catch (error) {
+            setError(true);
+            console.error('There was a problem with the fetch operation:', error);
+
         }
-        setIsLoading(true);
-        axios.get(apiURL + query + apiKey + lang)
-            .then(response => {
-                console.log(response.data)
-                setError(false);
-                setWeatherData(response.data || []);
-            })
-            .catch(error => {
-                setError(true);
-                console.error('There was a problem with the fetch operation:', error);
-            })
-            .finally(() => {
-                setIsLoading(false);
-            });
+        finally {
+            setIsLoading(false);
+        }
+
+
+
+        // response = await axios.get(apiURL + query + apiKey + lang)
+        //     .then(response => {
+        //         console.log(response.data)
+        //         setError(false);
+        //         setWeatherData(response.data || []);
+        //     })
+        //     .catch(error => {
+        //         setError(true);
+        //         console.error('There was a problem with the fetch operation:', error);
+        //     })
+        //     .finally(() => {
+        //         
+        //     });
     }
     return { isLoading, getWeatherData, error, axiosData }
 

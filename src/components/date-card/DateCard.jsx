@@ -10,12 +10,11 @@ function DateCard(props) {
             <p className={styles.city}>{props.name}</p>
           </div>
           <div className={styles.coordBlock}>
-            <p className={styles.coord}>Долгота: {props.lon}°</p>
-            <p className={styles.coord}>Широта: {props.lat}°</p>
+            <p className={styles.textValue}><span className={styles.descr}>Координаты на карте: </span>  {props.lon}°, {props.lat}°</p>
           </div>
         </div>
         <div className={styles.down}>
-          <p className={styles.currentTime}>{props.timeZoneHours}:{props.timeZoneMinutes}</p>
+          <p className={styles.time}>{props.timeZoneHours}:{props.timeZoneMinutes}</p>
           <p className={styles.currentDate}>{props.timeZoneDate}</p>
         </div>
       </div>
