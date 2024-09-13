@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     font-family: "Poppins";
+    padding-top: 20px;
 }
 
 .temperature {
