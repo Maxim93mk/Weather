@@ -1,7 +1,8 @@
 import styles from './CurrentWeatherCard.module.css';
 import DateCard from '../date-card/DateCard';
+import WeatherCard from '../weather-card/WeatherCard';
 
-function Main(props) {
+function CurrentWeatherCard(props) {
 console.log(props)
 const getCurrentDate = new Date();
 const currentTime = getCurrentDate.getTime();
@@ -32,6 +33,17 @@ const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, 
                     timeZoneHours = {timeZoneHours}
                     timeZoneMinutes = {timeZoneMinutes}
                     timeZoneDate = {currenrTimeZoneDate}/>
+          <WeatherCard />
+                        {/* <WeatherCard currentTemp={}
+                        feelTemp={}
+                        minTemp={}
+                        maxTemp={}
+                        sunrise={}
+                        sunset={}
+                        pressure={}
+                        hummidity={}
+                        seaLevel={}
+                        /> */}
           {/* <div className={styles.titleBlock}>
             <h2 className={styles.title}>Город: {props.name}222222</h2>
             <img src={props.icon} alt={props.country} className={styles.iconCountry} />
@@ -71,4 +83,4 @@ const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, 
   );
 }
 
-export default Main;
+export default CurrentWeatherCard;

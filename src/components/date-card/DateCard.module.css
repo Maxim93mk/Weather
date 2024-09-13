@@ -1,8 +1,8 @@
 .date {
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    /* flex-direction: column; */
+     display: flex;
+    flex-wrap: wrap; 
+     justify-content: center; 
+     flex-direction: column;
     padding: 25px;
     background-color: #5fa8d3;
     /* min-width: 600px; */
