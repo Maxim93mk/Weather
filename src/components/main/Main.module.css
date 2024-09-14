@@ -1,4 +1,26 @@
-.main {
-    padding-top: 50px;
+.main{
+    padding-top: 30px;
     font-family: "Poppins";
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+}
+
+.upSection{
+    display: flex;
+}
+
+.downSection{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.rightBlock{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }

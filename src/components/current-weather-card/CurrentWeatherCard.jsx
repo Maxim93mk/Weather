@@ -3,20 +3,6 @@ import DateCard from '../date-card/DateCard';
 import WeatherCard from '../weather-card/WeatherCard';
 
 function CurrentWeatherCard(props) {
-console.log(props)
-const getCurrentDate = new Date();
-const currentTime = getCurrentDate.getTime();
-const getTimeZoneTime = new Date(currentTime + (props.timezone*1000));
-const timeZoneDate = getTimeZoneTime.getUTCDate();
-const arrDayWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-const timeZoneDayWeek = arrDayWeek[getTimeZoneTime.getUTCDay()];
-const arrDayMounth = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
-const timeZoneMonth = arrDayMounth[getTimeZoneTime.getUTCMonth()];
-const timeZoneYear = getTimeZoneTime.getUTCFullYear();
-const timeZoneHours = getTimeZoneTime.getUTCHours();
-const timeZoneMinutes = getTimeZoneTime.getUTCMinutes();
-
-const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, ${timeZoneDayWeek}`;
 // var d = new Date(new Date().getTime() + (props.timezone * 1000));
 //             var hrs = d.getUTCHours();
 //             var mins = d.getUTCMinutes();
@@ -24,16 +10,8 @@ const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, 
 
   return (
     <>
-      <main>
-        <section className={styles.main}>
-          <DateCard lon={props.coord.lon}
-                    lat={props.coord.lat}
-                    icon = {props.weather[0].icon}
-                    name = {props.name}
-                    timeZoneHours = {timeZoneHours}
-                    timeZoneMinutes = {timeZoneMinutes}
-                    timeZoneDate = {currenrTimeZoneDate}/>
-          <WeatherCard />
+        
+          
                         {/* <WeatherCard currentTemp={}
                         feelTemp={}
                         minTemp={}
@@ -76,9 +54,6 @@ const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, 
               <img src={props.icon} alt={props.country} className={styles.iconCountry} />
             </div>
           </div> */}
-        </section>
-
-      </main>
     </>
   );
 }
