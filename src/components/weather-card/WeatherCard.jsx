@@ -7,7 +7,7 @@ function WeatherCard(props) {
 
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles.card}>
         <TempBlock />
         <WeatherConditionsBlock />
         <SunBlock />
