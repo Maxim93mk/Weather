@@ -30,7 +30,6 @@ function Main(props) {
           <div className={styles.leftBlock}>
             <DateCard lon={props.coord.lon}
               lat={props.coord.lat}
-              icon={props.weather[0].icon}
               name={props.name}
               timezone={props.timezone}/>
           </div>
@@ -43,7 +42,8 @@ function Main(props) {
             <WeatherCard  wind={props.wind}
                           main={props.main}
                           sys={props.sys}
-                          imgURL = {imgURL}/>
+                          imgURL = {imgURL}
+                          icon={props.weather[0]}/>
           </div>
           {/* <CurrentWeatherCard id={props.id}
             coord={props.coord}

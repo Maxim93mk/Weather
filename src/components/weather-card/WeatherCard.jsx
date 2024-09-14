@@ -14,8 +14,8 @@ function WeatherCard(props) {
       <div className={styles.card}>
         <TempBlock
           main={props.main}
-          sys={props.sys}
-          imgURL={props.imgURL} />
+          imgURL={props.imgURL} 
+          customRound={customRound}/>
         <WeatherConditionsBlock wind={props.wind}
           humidity={props.main.humidity}
           pressure={props.main.pressure} 
