@@ -4,11 +4,13 @@ import { useEffect } from 'react';
 
 
 function DateCard(props) {
-  const{hours, minutes, seconds, day, week, month, year, getCurrentDate} = useGetTimeZone();
-
+  const{hours, minutes, day, week, month, year, getCurrentDate} = useGetTimeZone();
+  
   useEffect(()=>{
-    getCurrentDate(props.timezone)}, []);
+    getCurrentDate(props.timezone);
     
+  }, []);
+
   return (
     <>
       <div className={styles.date}>
@@ -22,7 +24,7 @@ function DateCard(props) {
           </div>
         </div>
         <div className={styles.down}>
-          <p className={styles.time}>{hours}:{minutes}:{seconds}</p>
+          <p className={styles.time}>{hours}:{minutes}</p>
           <p className={styles.currentDate}>{day} {month} {year}, {week}</p>
         </div>
       </div>

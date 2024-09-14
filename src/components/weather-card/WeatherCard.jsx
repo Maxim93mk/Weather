@@ -8,9 +8,13 @@ function WeatherCard(props) {
   return (
     <>
       <div className={styles.card}>
-        <TempBlock />
-        <WeatherConditionsBlock />
-        <SunBlock />
+        <TempBlock 
+                   main={props.main}
+                   sys={props.sys}
+                   imgURL={props.imgURL} />
+        <WeatherConditionsBlock wind={props.wind}/>
+        <SunBlock sunrise={props.sys.sunrise}
+                  sunset={props.sys.sunset}/>
       </div>
     </>
   );

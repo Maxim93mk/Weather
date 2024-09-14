@@ -7,6 +7,7 @@ import MapCard from '../map-card/MapCard';
 
 
 function Main(props) {
+  const imgURL = 'http://openweathermap.org/img/w/';
   // console.log(props);
   // const getCurrentDate = new Date();
   // const currentTime = getCurrentDate.getTime();
@@ -31,7 +32,7 @@ function Main(props) {
               lat={props.coord.lat}
               icon={props.weather[0].icon}
               name={props.name}
-              timezone={props.timezone} />
+              timezone={props.timezone}/>
           </div>
           <div className={styles.rightBlock}>
             <MapCard />
@@ -39,7 +40,10 @@ function Main(props) {
         </section>
         <section className={styles.downSection}>
           <div className={styles.leftBlock}>
-            <WeatherCard />
+            <WeatherCard  wind={props.wind}
+                          main={props.main}
+                          sys={props.sys}
+                          imgURL = {imgURL}/>
           </div>
           {/* <CurrentWeatherCard id={props.id}
             coord={props.coord}

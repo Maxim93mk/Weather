@@ -92,6 +92,7 @@ function MainPage() {
   return (
     <>
       <div className="wrapper">
+        {/* <img src={'http://openweathermap.org/img/w/'+getWeatherData[0].weather[0].icon+".png"} alt="" /> */}
         {/* <Header axiosData={axiosData} /> */}
         <Header />
         {getWeatherDataProcessing()}
