@@ -7,20 +7,20 @@ import MapCard from '../map-card/MapCard';
 
 
 function Main(props) {
-  console.log(props)
-  const getCurrentDate = new Date();
-  const currentTime = getCurrentDate.getTime();
-  const getTimeZoneTime = new Date(currentTime + (props.timezone * 1000));
-  const timeZoneDate = getTimeZoneTime.getUTCDate();
-  const arrDayWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-  const timeZoneDayWeek = arrDayWeek[getTimeZoneTime.getUTCDay()];
-  const arrDayMounth = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
-  const timeZoneMonth = arrDayMounth[getTimeZoneTime.getUTCMonth()];
-  const timeZoneYear = getTimeZoneTime.getUTCFullYear();
-  const timeZoneHours = getTimeZoneTime.getUTCHours();
-  const timeZoneMinutes = getTimeZoneTime.getUTCMinutes();
+  // console.log(props);
+  // const getCurrentDate = new Date();
+  // const currentTime = getCurrentDate.getTime();
+  // const getTimeZoneTime = new Date(currentTime + (props.timezone * 1000));
+  // const timeZoneDate = getTimeZoneTime.getUTCDate();
+  // const arrDayWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  // const timeZoneDayWeek = arrDayWeek[getTimeZoneTime.getUTCDay()];
+  // const arrDayMounth = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+  // const timeZoneMonth = arrDayMounth[getTimeZoneTime.getUTCMonth()];
+  // const timeZoneYear = getTimeZoneTime.getUTCFullYear();
+  // const timeZoneHours = getTimeZoneTime.getUTCHours();
+  // const timeZoneMinutes = getTimeZoneTime.getUTCMinutes();
 
-  const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, ${timeZoneDayWeek}`;
+  // const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, ${timeZoneDayWeek}`;
 
   return (
     <>
@@ -31,9 +31,7 @@ function Main(props) {
               lat={props.coord.lat}
               icon={props.weather[0].icon}
               name={props.name}
-              timeZoneHours={timeZoneHours}
-              timeZoneMinutes={timeZoneMinutes}
-              timeZoneDate={currenrTimeZoneDate} />
+              timezone={props.timezone} />
           </div>
           <div className={styles.rightBlock}>
             <MapCard />

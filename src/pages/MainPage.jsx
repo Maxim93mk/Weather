@@ -78,7 +78,7 @@ function MainPage() {
                 sys = {getWeatherData.sys}
                 timezone = {getWeatherData.timezone} /> */}
         </>
-      )
+      );
     }
   }
 
@@ -93,7 +93,7 @@ function MainPage() {
     <>
       <div className="wrapper">
         {/* <Header axiosData={axiosData} /> */}
-        <Header  />
+        <Header />
         {getWeatherDataProcessing()}
         {/* <Main coord={getWeatherData.coord}
           weather={getWeatherData.weather} /> */}
