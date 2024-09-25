@@ -7,21 +7,6 @@ import MapCard from '../map-card/MapCard';
 
 
 function Main(props) {
-  const imgURL = 'http://openweathermap.org/img/w/';
-  // console.log(props);
-  // const getCurrentDate = new Date();
-  // const currentTime = getCurrentDate.getTime();
-  // const getTimeZoneTime = new Date(currentTime + (props.timezone * 1000));
-  // const timeZoneDate = getTimeZoneTime.getUTCDate();
-  // const arrDayWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-  // const timeZoneDayWeek = arrDayWeek[getTimeZoneTime.getUTCDay()];
-  // const arrDayMounth = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
-  // const timeZoneMonth = arrDayMounth[getTimeZoneTime.getUTCMonth()];
-  // const timeZoneYear = getTimeZoneTime.getUTCFullYear();
-  // const timeZoneHours = getTimeZoneTime.getUTCHours();
-  // const timeZoneMinutes = getTimeZoneTime.getUTCMinutes();
-
-  // const currenrTimeZoneDate = `${timeZoneDate} ${timeZoneMonth}  ${timeZoneYear}, ${timeZoneDayWeek}`;
 
   return (
     <>
@@ -31,7 +16,7 @@ function Main(props) {
             <DateCard lon={props.coord.lon}
               lat={props.coord.lat}
               name={props.name}
-              timezone={props.timezone}/>
+              timezone={props.timezone} />
           </div>
           <div className={styles.rightBlock}>
             <MapCard />
@@ -39,11 +24,10 @@ function Main(props) {
         </section>
         <section className={styles.downSection}>
           <div className={styles.leftBlock}>
-            <WeatherCard  wind={props.wind}
-                          main={props.main}
-                          sys={props.sys}
-                          imgURL = {imgURL}
-                          icon={props.weather[0]}/>
+            <WeatherCard wind={props.wind}
+              main={props.main}
+              sys={props.sys}
+              weather={props.weather[0]} />
           </div>
           {/* <CurrentWeatherCard id={props.id}
             coord={props.coord}

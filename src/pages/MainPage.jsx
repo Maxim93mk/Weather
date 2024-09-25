@@ -16,13 +16,13 @@ function MainPage() {
         {
           "id": 501,
           "main": "Rain",
-          "description": "moderate rain",
+          "description": "Умеренный дождь",
           "icon": "10d"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 298.48,
+        "temp": 29.48,
         "feels_like": 298.74,
         "temp_min": 297.56,
         "temp_max": 300.05,

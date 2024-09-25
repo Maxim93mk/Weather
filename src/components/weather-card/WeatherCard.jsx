@@ -14,11 +14,14 @@ function WeatherCard(props) {
       <div className={styles.card}>
         <TempBlock
           main={props.main}
-          imgURL={props.imgURL} 
-          customRound={customRound}/>
+          customRound={customRound}
+          icon = {props.weather.icon}
+          iconDescr = {props.weather.description}/>
         <WeatherConditionsBlock wind={props.wind}
           humidity={props.main.humidity}
           pressure={props.main.pressure} 
+          
+          // icon = {props.icon}
           customRound={customRound}/>
         <SunBlock sunrise={props.sys.sunrise}
           sunset={props.sys.sunset} />

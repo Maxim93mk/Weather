@@ -5,6 +5,8 @@ const currentTemp = props.customRound(Number(props.main.temp), 0);
 const feelTemp = props.customRound(Number(props.main.feels_like), 0);
 const minTemp = props.customRound(Number(props.main.temp_min), 0);
 const maxTemp = props.customRound(Number(props.main.temp_max), 0);
+const imgURL = 'http://openweathermap.org/img/w/' + props.icon + '.png';
+
 
   return (
     <>
@@ -12,8 +14,8 @@ const maxTemp = props.customRound(Number(props.main.temp_max), 0);
         <div className={styles.temperature}>
           <p className={styles.currentTempValue}>{currentTemp}°C</p>
           <div className={styles.condition}>
-            <img src="assets/img/clear-day.svg" alt="Погодные условия" />
-            <p className={styles.textDescr}>Пасмурно</p>
+            <img src={imgURL} alt="Погодные условия" />
+            <p className={styles.textDescr}>{props.iconDescr}</p>
           </div>
           <p className={styles.textDescr}>Ощущается как {feelTemp}°C</p>
         </div>
