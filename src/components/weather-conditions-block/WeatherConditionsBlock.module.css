@@ -1,15 +1,16 @@
-.main {
+.block {
     display: flex;
     justify-content: space-between;
     /* flex-direction: column; */
     flex-wrap: wrap;
     font-family: "Poppins";
     padding-top: 20px;
+    width: 100%;
 }
 
 .wind{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
 }
 

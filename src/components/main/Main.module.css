@@ -1,4 +1,33 @@
 .main {
-    padding-top: 50px;
+    padding-top: 30px;
     font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+}
+
+.upSection {
+    display: flex;
+    gap: 20px;
+    height: 50%;
+}
+
+.downSection {
+    display: flex;
+    gap: 20px;
+    height: 50%;
+}
+
+.rightBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+}
+
+.leftBlock{
+    width: 50%;
 }
