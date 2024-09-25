@@ -3,8 +3,7 @@ import styles from './WeatherConditionsBlock.module.css';
 function WeatherConditionsBlock(props) {
 
 
-  const pressure = props.customRound(props.pressure*0.75, 2);
-
+  const pressure = props.customRound(props.pressure * 0.75, 2);
   return (
     <>
       <div className={styles.block}>
@@ -13,7 +12,8 @@ function WeatherConditionsBlock(props) {
           <p className='descrText'>{props.wind.speed} м/с</p>
         </div>
         <div className={styles.wind}>
-          <img src="assets/img/compass.svg" alt="Направление ветра" />
+          <img src="assets/img/compass.svg" alt="Направление ветра" 
+          style={{transform: `rotate(${props.wind.deg}deg)` }}/>
           <p className='descrText'>ЮЗ</p>
         </div>
         <div className={styles.wind}>
