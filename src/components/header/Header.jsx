@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 function Header(props) {
   const [stringSearch, setStringSearch] = useState('');
-
+  const [flagSwitch, setFlagSwitch] = useState(false);
   // Формирование строки для запроса
   const setSearchQuery = (str) => {
     setStringSearch(str);
@@ -15,10 +15,14 @@ function Header(props) {
     props.axiosData(stringSearch);
   }
 
+  const getDimensionTemp = () => {
+    setFlagSwitch(flag=>!flag);  
+  }
+
   useEffect(() => {
     props.axiosData();
   }, []);
-
+  console.log(flagSwitch)
   return (
     <>
       <header>
@@ -33,7 +37,8 @@ function Header(props) {
             <button className={styles.searchBtn}
               onClick={() => sendSearchQuery()}></button>
           </div>
-          <div className={styles.switchBtn styles.switchOn}></div>
+          <div className={`${flagSwitch} & ${styles.switchOn} ${styles.switchBtn} :${styles.switchOff} ${styles.switchBtnOff}`}
+            onClick={() => getDimensionTemp()}></div>
         </section>
       </header>
     </>
