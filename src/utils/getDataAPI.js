@@ -9,14 +9,16 @@ const useGetWeatherData = () => {
     const apiURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
     const apiKey = '&appid=35c6ba00b7d1a23174ed6f5acca058c6';
     const lang = '&lang=ru';
+    const units = '&units=metric';
 
     //Вынести в запросе город и единицы измерения
     const axiosData = async (query = 'Зеленодольск') => {
         try {
             if (!query) {
                 query = 'Казань';
-            }     
-            const URL = apiURL + query + apiKey + lang;
+            } 
+            console.log(query)    
+            const URL = apiURL + query + apiKey + units + lang;
             console.log(URL)
             const response = await axios.get(URL);
             setError(false);
