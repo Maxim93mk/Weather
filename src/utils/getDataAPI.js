@@ -19,7 +19,6 @@ const useGetWeatherData = () => {
             } 
             console.log(query)    
             const URL = apiURL + query + apiKey + units + lang;
-            console.log(URL)
             const response = await axios.get(URL);
             setError(false);
             setWeatherData(response.data || []);
