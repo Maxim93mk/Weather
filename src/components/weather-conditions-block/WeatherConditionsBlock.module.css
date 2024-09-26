@@ -14,6 +14,15 @@
     align-items: center;
 }
 
+.windImg{
+    display: flex;
+    align-items: center;
+    background-image: url('../../../public/assets/img/compass.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 32px;
+}
+
 .descrText{
     font-size: 18px;
     font-weight: 400;

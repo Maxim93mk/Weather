@@ -34,7 +34,7 @@ function MainPage() {
       "visibility": 10000,
       "wind": {
         "speed": 0.62,
-        "deg": 349,
+        "deg": 250,
         "gust": 1.18
       },
       "rain": {

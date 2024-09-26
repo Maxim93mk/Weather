@@ -12,8 +12,10 @@ function WeatherConditionsBlock(props) {
           <p className='descrText'>{props.wind.speed} м/с</p>
         </div>
         <div className={styles.wind}>
-          <img src="assets/img/compass.svg" alt="Направление ветра" 
-          style={{transform: `rotate(${props.wind.deg}deg)` }}/>
+          <div className={styles.windImg}>
+            <img src="assets/img/compassArr1.svg" alt="Направление ветра"
+              style={{ transform: `rotate(${props.wind.deg}deg)` }} />
+          </div>
           <p className='descrText'>ЮЗ</p>
         </div>
         <div className={styles.wind}>
