@@ -15,9 +15,9 @@ function Header(props) {
     props.axiosData(stringSearch);
   }
 
-  // useEffect(() => {
-  //   props.axiosData();
-  // }, []);
+  useEffect(() => {
+    props.axiosData();
+  }, []);
 
   return (
     <>

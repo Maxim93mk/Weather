@@ -29,14 +29,6 @@ function Main(props) {
               sys={props.sys}
               weather={props.weather[0]} />
           </div>
-          {/* <CurrentWeatherCard id={props.id}
-            coord={props.coord}
-            weather={props.weather}
-            name={props.name}
-            wind={props.wind}
-            main={props.main}
-            sys={props.sys}
-            timezone={props.timezone}/> */}
           <div className={styles.rightBlock}>
             <WeatherNextDayCard />
             <WeatherNextDayCard />

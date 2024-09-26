@@ -6,7 +6,7 @@ const useGetWeatherData = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [getWeatherData, setWeatherData] = useState('');
     const [error, setError] = useState(false);
-    const apiURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
+    const apiURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
     const apiKey = '&appid=35c6ba00b7d1a23174ed6f5acca058c6';
     const lang = '&lang=ru';
 
@@ -15,17 +15,16 @@ const useGetWeatherData = () => {
         try {
             if (!query) {
                 query = 'Казань';
-            }
-            setIsLoading(true);
+            }     
             const URL = apiURL + query + apiKey + lang;
+            console.log(URL)
             const response = await axios.get(URL);
-            console.log(response.data);
             setError(false);
             setWeatherData(response.data || []);
+            setIsLoading(true);
         } catch (error) {
             setError(true);
             console.error('There was a problem with the fetch operation:', error);
-
         }
         finally {
             setIsLoading(false);
