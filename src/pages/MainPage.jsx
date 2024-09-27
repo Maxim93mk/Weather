@@ -5,8 +5,8 @@ import useGetWeatherData from '../utils/getDataAPI';
 import { useEffect, useState } from 'react';
 
 function MainPage() {
-  const { isLoading, getWeatherData, error, axiosData } = useGetWeatherData();
-  console.log(isLoading, getWeatherData , error)
+  const { isLoading, getWeatherData, error, getUnitsFlag, axiosData } = useGetWeatherData();
+  console.log(isLoading, getWeatherData , error, getUnitsFlag)
 
   const getWeatherDataProcessing = () => {
     if (getWeatherData !== '') {
@@ -19,7 +19,9 @@ function MainPage() {
             wind={getWeatherData.wind}
             main={getWeatherData.main}
             sys={getWeatherData.sys}
-            timezone={getWeatherData.timezone} />
+            timezone={getWeatherData.timezone} 
+            getUnitsFlag = {getUnitsFlag}/>
+            
         </>
       );
     }
@@ -28,7 +30,8 @@ function MainPage() {
   return (
     <>
       <div className="wrapper">
-        <Header axiosData={axiosData}/>
+        <Header axiosData={axiosData}
+                getUnitsFlag = {getUnitsFlag}/>
         {getWeatherDataProcessing()}
       </div>
     </>

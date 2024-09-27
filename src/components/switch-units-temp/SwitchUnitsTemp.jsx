@@ -7,16 +7,16 @@ function SwitchUnitsTemp(props) {
   const [flagSwitch, setFlagSwitch] = useState(true);
   const [classUnit, setClassUint] = useState('');
   const stringSearch = props.stringSearch;
+  console.log(classUnit, flagSwitch)
+    
+  
+
   const getUnitsTemp = () => {
     setFlagSwitch(!flagSwitch);
     flagSwitch ? setClassUint(styles.switchF) : setClassUint(styles.switchC);
     props.axiosData(stringSearch, flagSwitch);
   }
-
-
-
-
-
+  
   return (
     <>
       <div className={styles.unitsTemp}>

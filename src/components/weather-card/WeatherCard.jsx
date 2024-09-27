@@ -29,13 +29,15 @@ function WeatherCard(props) {
           main={props.main}
           customRound={customRound}
           icon={props.weather.icon}
-          iconDescr={props.weather.description} />
+          iconDescr={props.weather.description} 
+          getUnitsFlag = {props.getUnitsFlag}/>
         <WeatherConditionsBlock wind={props.wind}
           deg={props.wind.deg}
           getDescrWindDeg={getDescrWindDeg}
           humidity={props.main.humidity}
           pressure={props.main.pressure}
-          customRound={customRound} />
+          customRound={customRound} 
+          getUnitsFlag = {props.getUnitsFlag}/>
         <SunBlock sunrise={props.sys.sunrise}
           sunset={props.sys.sunset} />
       </div>

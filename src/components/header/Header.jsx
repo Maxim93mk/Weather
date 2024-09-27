@@ -12,7 +12,7 @@ function Header(props) {
   }
   // Отправка на запрос фильма из поисковой строки
   const sendSearchQuery = () => {
-    props.axiosData(stringSearch);
+    props.axiosData(stringSearch, props.getUnitsFlag);
   }
   useEffect(() => {
     props.axiosData();

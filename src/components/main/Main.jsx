@@ -27,7 +27,8 @@ function Main(props) {
             <WeatherCard wind={props.wind}
               main={props.main}
               sys={props.sys}
-              weather={props.weather[0]} />
+              weather={props.weather[0]} 
+              getUnitsFlag = {props.getUnitsFlag}/>
           </div>
           <div className={styles.rightBlock}>
             <WeatherNextDayCard />

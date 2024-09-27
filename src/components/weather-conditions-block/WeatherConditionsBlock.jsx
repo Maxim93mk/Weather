@@ -5,13 +5,14 @@ function WeatherConditionsBlock(props) {
   const pressure = props.customRound(props.pressure * 0.75, 2);
   const deg = Number(props.wind.deg);
   const degDescr = props.getDescrWindDeg(deg);
+  const windSpeed = props.getUnitsFlag ? props.customRound(props.wind.speed * 0.44704, 2) : props.wind.speed;
 
   return (
     <>
       <div className={styles.block}>
         <div className={styles.wind}>
           <img src="assets/img/windsock.svg" alt="Скорость ветра" />
-          <p className='descrText'>{props.wind.speed} м/с</p>
+          <p className='descrText'>{windSpeed} м/с</p>
         </div>
         <div className={styles.wind}>
           <div className={styles.windImg}>
