@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 import { useEffect, useState } from 'react';
-
+import SwitchUnitsTemp from '../switch-units-temp/SwitchUnitsTemp'
 
 
 function Header(props) {
@@ -12,12 +12,12 @@ function Header(props) {
   }
   // Отправка на запрос фильма из поисковой строки
   const sendSearchQuery = () => {
-    props.axiosData(stringSearch);
+    props.axiosData(stringSearch, props.getUnitsFlag);
   }
+  useEffect(() => {
+    props.axiosData();
+  }, []);
 
-  // useEffect(() => {
-  //   props.axiosData();
-  // }, []);
 
   return (
     <>
@@ -33,6 +33,8 @@ function Header(props) {
             <button className={styles.searchBtn}
               onClick={() => sendSearchQuery()}></button>
           </div>
+          <SwitchUnitsTemp stringSearch={stringSearch}
+                           axiosData = {props.axiosData}/>
         </section>
       </header>
     </>
