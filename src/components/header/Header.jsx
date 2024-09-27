@@ -1,11 +1,11 @@
 import styles from './Header.module.css'
 import { useEffect, useState } from 'react';
-
+import SwitchUnitsTemp from '../switch-units-temp/SwitchUnitsTemp'
 
 
 function Header(props) {
   const [stringSearch, setStringSearch] = useState('');
-  const [flagSwitch, setFlagSwitch] = useState(false);
+
   // Формирование строки для запроса
   const setSearchQuery = (str) => {
     setStringSearch(str);
@@ -14,15 +14,11 @@ function Header(props) {
   const sendSearchQuery = () => {
     props.axiosData(stringSearch);
   }
-
-  const getDimensionTemp = () => {
-    setFlagSwitch(flag=>!flag);  
-  }
-
   useEffect(() => {
     props.axiosData();
   }, []);
-  console.log(flagSwitch)
+
+
   return (
     <>
       <header>
@@ -37,8 +33,7 @@ function Header(props) {
             <button className={styles.searchBtn}
               onClick={() => sendSearchQuery()}></button>
           </div>
-          <div className={`${flagSwitch} & ${styles.switchOn} ${styles.switchBtn} :${styles.switchOff} ${styles.switchBtnOff}`}
-            onClick={() => getDimensionTemp()}></div>
+          <SwitchUnitsTemp/>
         </section>
       </header>
     </>
