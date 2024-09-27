@@ -33,7 +33,8 @@ function Header(props) {
             <button className={styles.searchBtn}
               onClick={() => sendSearchQuery()}></button>
           </div>
-          <SwitchUnitsTemp/>
+          <SwitchUnitsTemp stringSearch={stringSearch}
+                           axiosData = {props.axiosData}/>
         </section>
       </header>
     </>

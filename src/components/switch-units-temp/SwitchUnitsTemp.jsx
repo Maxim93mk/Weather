@@ -4,13 +4,16 @@ import { useState } from 'react';
 
 
 function SwitchUnitsTemp(props) {
-  const [flagSwitch, setFlagSwitch] = useState(false);
-
+  const [flagSwitch, setFlagSwitch] = useState(true);
+  const [classUnit, setClassUint] = useState('');
+  const stringSearch = props.stringSearch;
   const getUnitsTemp = () => {
-    setFlagSwitch(flag => !flag);
+    setFlagSwitch(!flagSwitch);
+    flagSwitch ? setClassUint(styles.switchF) : setClassUint(styles.switchC);
+    props.axiosData(stringSearch, flagSwitch);
   }
 
-  const classUnit = flagSwitch ? styles.switchF : styles.switchC;
+
 
 
 
